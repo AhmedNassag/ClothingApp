@@ -1,0 +1,860 @@
+{
+	"info": {
+		"_postman_id": "f5b35083-89be-4475-a720-707e936ea4b0",
+		"name": "Clothing_App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "all_posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjEzOTk0OSwiZXhwIjoxNzAyMTQzNTQ5LCJuYmYiOjE3MDIxMzk5NDksImp0aSI6Ing0VDluR05uSzRYQzBRbUIiLCJzdWIiOiI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xmYidYjoZZq5_lpvb2k__5OKVPogpLP4wUjnFUSlDeQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/all-posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"all-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_post_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjE1MDA0NCwiZXhwIjoxNzAyMTUzNjQ0LCJuYmYiOjE3MDIxNTAwNDQsImp0aSI6InNEaGp5cHlMcG1qNXhlRnciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.-VjytJU4GV3ojSG7TolNtemD287IcVCuo4hzy6X_prQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/show-post/41",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"show-post",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store_post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjE1MDA0NCwiZXhwIjoxNzAyMTUzNjQ0LCJuYmYiOjE3MDIxNTAwNDQsImp0aSI6InNEaGp5cHlMcG1qNXhlRnciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.-VjytJU4GV3ojSG7TolNtemD287IcVCuo4hzy6X_prQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "post content with photos",
+									"type": "default"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": [
+										"/G:/xampp/htdocs/projects/Concept-Group/public/attachments/blog/1691949591.jpg",
+										"/G:/xampp/htdocs/projects/Concept-Group/public/attachments/blog/1691949662.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/store-post",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"store-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjE1MDA0NCwiZXhwIjoxNzAyMTUzNjQ0LCJuYmYiOjE3MDIxNTAwNDQsImp0aSI6InNEaGp5cHlMcG1qNXhlRnciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.-VjytJU4GV3ojSG7TolNtemD287IcVCuo4hzy6X_prQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "post content update",
+									"type": "default"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/G:/xampp/htdocs/projects/Concept-Group/public/attachments/brand/1686748059.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/update-post/41",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"update-post",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjE1MDA0NCwiZXhwIjoxNzAyMTUzNjQ0LCJuYmYiOjE3MDIxNTAwNDQsImp0aSI6InNEaGp5cHlMcG1qNXhlRnciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.-VjytJU4GV3ojSG7TolNtemD287IcVCuo4hzy6X_prQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/delete-post/41",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"delete-post",
+								"41"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PostComments",
+			"item": [
+				{
+					"name": "all_postComments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjEzOTI3NywiZXhwIjoxNzAyMTQyODc3LCJuYmYiOjE3MDIxMzkyNzcsImp0aSI6IlFQNjFTYzcxV1ExSUF1RXUiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.XhxSF7g2U9-nlRIL9tb7DqldTUB8TPFJeA9fUSvhWvY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/all-postComments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"all-postComments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_postComment_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/show-postComment/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"show-postComment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store_postComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "postComment content",
+									"type": "default"
+								},
+								{
+									"key": "post_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/store-postComment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"store-postComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_postComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "postComment content update",
+									"type": "default"
+								},
+								{
+									"key": "post_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/update-postComment/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"update-postComment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-postComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/delete-postComment/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"delete-postComment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PostLikes",
+			"item": [
+				{
+					"name": "all_postLikes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/all-postLikes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"all-postLikes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_postLike_by_id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/show-postLike/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"show-postLike",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store_postLike",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "is_like",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "post_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/store-postLike",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"store-postLike"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_postLike",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "is_like",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "post_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/update-postLike/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"update-postLike",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-postLike",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/delete-postLike/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"delete-postLike",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "test0",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "test0@email.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ahmednassag@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjEzMDYyMywiZXhwIjoxNzAyMTM0MjIzLCJuYmYiOjE3MDIxMzA2MjMsImp0aSI6IlZwblQzU1hNckpaZDBQOVUiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.qEcnRRo6LQi8MWFLADAYSDvmoVMxrX8kQ9tHqx9388k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjEzMTA4NCwiZXhwIjoxNzAyMTM0Njg0LCJuYmYiOjE3MDIxMzEwODQsImp0aSI6ImxMeWtyOGZwSUF6SkxGbUkiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.o7ekI34zCDbnVqrA12FHbvFVSMkRaj3eIApcSe3C4iE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9yZWZyZXNoIiwiaWF0IjoxNzAyMTMxMDg0LCJleHAiOjE3MDIxMzQ3MjcsIm5iZiI6MTcwMjEzMTEyNywianRpIjoidXdxb2IyZkJKS3BNNEtmTCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.FMhtKxBVf3I82bhnCfM4vngVDwYrJBZ0i1JC1Uk5XbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old_password",
+									"value": "123456789",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/change-password",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjE0NjM5MCwiZXhwIjoxNzAyMTQ5OTkwLCJuYmYiOjE3MDIxNDYzOTAsImp0aSI6IjNkcVh5UWFQcElzRnM2WEkiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.vtdKWU5zETLmTG063wB5qVf3rZKdw7fHVrBQeLAeSbk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ahmednassag",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "ahmednassag@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/G:/xampp/htdocs/projects/Concept-Group/public/attachments/brand/1692883893.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/update-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjE1MDA0NCwiZXhwIjoxNzAyMTUzNjQ0LCJuYmYiOjE3MDIxNTAwNDQsImp0aSI6InNEaGp5cHlMcG1qNXhlRnciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.-VjytJU4GV3ojSG7TolNtemD287IcVCuo4hzy6X_prQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/user-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"user-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userPosts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vY2xvdGhpbmdfYXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTcwMjEzOTk0OSwiZXhwIjoxNzAyMTQzNTQ5LCJuYmYiOjE3MDIxMzk5NDksImp0aSI6Ing0VDluR05uSzRYQzBRbUIiLCJzdWIiOiI1IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xmYidYjoZZq5_lpvb2k__5OKVPogpLP4wUjnFUSlDeQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/user-posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"user-posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "clothing_app.com",
+			"type": "default"
+		}
+	]
+}
