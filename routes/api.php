@@ -67,4 +67,16 @@ Route::group(['middleware' => 'JwtMiddleware'],function()
     Route::post('store-postComment',[PostCommentController::class,'store']);
     Route::post('update-postComment/{id}',[PostCommentController::class,'update']);
     Route::post('delete-postComment/{id}',[PostCommentController::class,'delete']);
+
+
+
+    //chat
+    Route::get('all-chats',[ChatController::class,'index']);
+    Route::get('show-chat/{id}',[ChatController::class,'show']);
+    Route::post('store-chat',[ChatController::class,'store']);
+    Route::post('update-chat/{id}',[ChatController::class,'update']);
+    Route::post('delete-chat/{id}',[ChatController::class,'delete']);
+    Route::get('show-chat-by-senderId/{senderId}',[ChatController::class,'showChatBySenderId']);
+    Route::get('show-chat-by-receiverId/{receiverId}',[ChatController::class,'showChatByReceiverId']);
+    Route::get('show-chat-between-two-users/{firstUserId}/{secondUserId}',[ChatController::class,'showChatBetweenTwoUsers']);
 });
