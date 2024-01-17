@@ -131,9 +131,16 @@ class ChatController extends Controller
 
 
 
-    public function showChatBySenderIdAndReceiverId($senderId, $receiverId)
+    public function showChatBetweenTwoUsers($firstUserId, $secondUserId)
     {
-        $chats = Chat::with(['sender.media', 'receiver.media'])->where('sender_id',$senderId)->where('receiver_id', $receiverId)->get();
+        $chats = Chat::with(['sender.media', 'receiver.media'])
+        ->where(function ($query) use ($firstUserId, $secondUserId) {
+            $query->where('sender_id', $firstUserId)
+                  ->where('receiver_id', $secondUserId);
+        })->orWhere(function ($query) use ($firstUserId, $secondUserId) {
+            $query->where('sender_id', $secondUserId)
+                  ->where('receiver_id', $firstUserId);
+        })->orderBy('created_at', 'asc')->get();
         if($chats)
         {
             return $this->apiResponse($chats,'The Data Showed',200);
